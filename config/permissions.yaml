@@ -1,0 +1,22 @@
+# Collaborator / team permission manifest
+# Used by G1 operations
+
+roles:
+  admin:
+    description: "Full administrative access — requires explicit human approval"
+    max_count: 2
+  maintain:
+    description: "Maintain access for trusted maintainers"
+  write:
+    description: "Write access for active contributors"
+  triage:
+    description: "Triage issues and PRs"
+  read:
+    description: "Default read-only access"
+
+policy:
+  prefer_read: true
+  require_approval_for:
+    - admin
+    - maintain
+    - write

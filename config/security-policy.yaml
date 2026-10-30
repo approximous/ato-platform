@@ -1,0 +1,19 @@
+# High-level security policy for ATO bootstrap
+
+evidence:
+  classification_required: true
+  retain_days: 365
+
+authorization:
+  human_approval_required_for:
+    - APPLY
+    - collaborator elevation
+    - branch rule changes
+    - secret-related changes
+
+fail_closed: true
+
+modes_allowed_without_approval:
+  - PLAN
+  - VERIFY
+  - ASSURE
